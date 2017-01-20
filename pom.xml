@@ -14,4 +14,44 @@
     </modules>
 
 
+    <organization>
+        <name>open-developer</name>
+        <url>https://github.com/open-developer</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+
+    <developers>
+        <developer>
+            <id>abhilekhsingh041992</id>
+            <name>Abhilekh Singh</name>
+            <email>abhilekhsingh041992@gmail.com</email>
+            <url>https://github.com/abhilekhsingh041992</url>
+        </developer>
+        <developer>
+            <id>sudhanshu-gupta</id>
+            <name>Sudhanshu Gupta</name>
+            <email>sudhanshu97gupta@gmail.com</email>
+            <url>https://github.com/sudhanshu-gupta</url>
+        </developer>
+    </developers>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
+
 </project>
