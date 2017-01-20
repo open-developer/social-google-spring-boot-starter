@@ -30,11 +30,7 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- google libraries dependencies -->
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>com.google.api-client</groupId>
             <artifactId>google-api-client</artifactId>
@@ -45,6 +41,7 @@
                     <artifactId>guava-jdk5</artifactId>
                 </exclusion>
             </exclusions>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
