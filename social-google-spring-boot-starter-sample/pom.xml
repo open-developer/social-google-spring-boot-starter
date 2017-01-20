@@ -31,7 +31,7 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
-            <groupId>me.sudhanshu</groupId>
+            <groupId>io.github.open-developer</groupId>
             <artifactId>social-google-spring-boot-starter</artifactId>
             <version>1.0.0.RELEASE</version>
         </dependency>
