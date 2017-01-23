@@ -15,8 +15,11 @@ import java.security.GeneralSecurityException;
 @Component
 public class GoogleIdTokenVerifierTemplate {
 
-    @Autowired
     private GoogleIdTokenVerifier googleIdTokenVerifier;
+
+    public GoogleIdTokenVerifierTemplate(GoogleIdTokenVerifier googleIdTokenVerifier) {
+        this.googleIdTokenVerifier = googleIdTokenVerifier;
+    }
 
     public GoogleIdToken verify(String idToken) throws GeneralSecurityException, IOException {
         return googleIdTokenVerifier.verify(idToken);

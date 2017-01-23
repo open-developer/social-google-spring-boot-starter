@@ -25,8 +25,8 @@ public class GoogleIdentifierConfiguration {
     private GoogleIdentifierProperties googleIdentifierProperties;
 
     @Bean
-    public GoogleIdTokenVerifier googleIdTokenVerifier() {
-        return new GoogleIdTokenVerifier.Builder(httpTransport(), jacksonFactory())
+    public GoogleIdTokenVerifier googleIdTokenVerifier(JacksonFactory jacksonFactory, HttpTransport httpTransport) {
+        return new GoogleIdTokenVerifier.Builder(httpTransport, jacksonFactory)
                 .setIssuer(googleIdentifierProperties.getIssuer())
                 .setAudience(Arrays.asList(googleIdentifierProperties.getClients()))
                 .build();
@@ -40,5 +40,10 @@ public class GoogleIdentifierConfiguration {
     @Bean
     public HttpTransport httpTransport() {
         return new NetHttpTransport();
+    }
+
+    @Bean
+    public GoogleIdTokenVerifierTemplate googleIdTokenVerifierTemplate(GoogleIdTokenVerifier googleIdTokenVerifier) {
+        return new GoogleIdTokenVerifierTemplate(googleIdTokenVerifier);
     }
 }
