@@ -5,7 +5,7 @@
 
     <groupId>io.github.open-developer</groupId>
     <artifactId>social-google-spring-boot-starter</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
 
     <properties>
         <spring-boot.version>1.4.0.RELEASE</spring-boot.version>
@@ -96,6 +96,14 @@
         </repository>
     </distributionManagement>
 
+    <scm>
+        <connection>scm:git:https://github.com/open-developer/social-google-spring-boot-starter-configurator.git</connection>
+        <developerConnection>scm:git:https://github.com/open-developer/social-google-spring-boot-starter-configurator.git</developerConnection>
+        <url>https://github.com/open-developer/social-google-spring-boot-starter-configurator</url>
+        <tag>social-google-spring-boot-starter-0.0.2-RELEASE</tag>
+    </scm>
+
+
     <profiles>
         <profile>
             <id>release</id>
@@ -158,8 +166,4 @@
     </profiles>
 
 
-
-  <scm>
-    <tag>social-google-spring-boot-starter-0.0.1-RELEASE</tag>
-  </scm>
 </project>
