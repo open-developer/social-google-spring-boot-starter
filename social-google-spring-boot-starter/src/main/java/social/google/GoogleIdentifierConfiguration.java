@@ -41,4 +41,9 @@ public class GoogleIdentifierConfiguration {
     public HttpTransport httpTransport() {
         return new NetHttpTransport();
     }
+
+    @Bean
+    public GoogleIdTokenVerifierTemplate googleIdTokenVerifierTemplate(GoogleIdTokenVerifier googleIdTokenVerifier) {
+        return new GoogleIdTokenVerifierTemplate(googleIdTokenVerifier);
+    }
 }
