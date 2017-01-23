@@ -29,6 +29,8 @@ public class GoogleIdentifierConfigurationTest {
         load(EmptyConfiguration.class, "spring.social.google.clients=client1,client2,client3");
         GoogleIdTokenVerifier googleIdTokenVerifier = this.context.getBean(GoogleIdTokenVerifier.class);
         assertNotNull(googleIdTokenVerifier);
+        GoogleIdTokenVerifierTemplate googleIdTokenVerifierTemplate = this.context.getBean(GoogleIdTokenVerifierTemplate.class);
+        assertNotNull(googleIdTokenVerifierTemplate);
     }
 
     @Configuration

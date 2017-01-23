@@ -21,8 +21,12 @@ import java.util.Arrays;
 @EnableConfigurationProperties(GoogleIdentifierProperties.class)
 public class GoogleIdentifierConfiguration {
 
+    private final GoogleIdentifierProperties googleIdentifierProperties;
+
     @Autowired
-    private GoogleIdentifierProperties googleIdentifierProperties;
+    public GoogleIdentifierConfiguration(GoogleIdentifierProperties googleIdentifierProperties) {
+        this.googleIdentifierProperties = googleIdentifierProperties;
+    }
 
     @Bean
     public GoogleIdTokenVerifier googleIdTokenVerifier(JacksonFactory jacksonFactory, HttpTransport httpTransport) {

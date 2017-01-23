@@ -5,7 +5,7 @@
 
     <groupId>io.github.open-developer</groupId>
     <artifactId>social-google-spring-boot-starter</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <name>social-google-spring-boot-starter</name>
     <url>https://github.com/open-developer/social-google-spring-boot-starter-configurator</url>
     <description>The `social-google-spring-boot-starter` is a Spring Boot application that allows users authenticate google token and access user information.</description>
