@@ -48,7 +48,7 @@ public class GoogleIdentifierConfiguration {
     }
 
     @Bean
-    public GoogleTokenVerifierTemplate googleIdTokenVerifierTemplate(GoogleIdTokenVerifier googleIdTokenVerifier) {
+    public GoogleTokenVerifierTemplate googleTokenVerifierTemplate(GoogleIdTokenVerifier googleIdTokenVerifier) {
         return new GoogleTokenVerifierTemplate(googleIdTokenVerifier);
     }
 }
