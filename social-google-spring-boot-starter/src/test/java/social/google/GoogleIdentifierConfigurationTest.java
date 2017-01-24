@@ -6,6 +6,8 @@ import org.junit.Test;
 import org.springframework.boot.test.EnvironmentTestUtils;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Configuration;
+import social.google.api.impl.GoogleTokenVerifierTemplate;
+import social.google.config.GoogleIdentifierConfiguration;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -29,8 +31,8 @@ public class GoogleIdentifierConfigurationTest {
         load(EmptyConfiguration.class, "spring.social.google.clients=client1,client2,client3");
         GoogleIdTokenVerifier googleIdTokenVerifier = this.context.getBean(GoogleIdTokenVerifier.class);
         assertNotNull(googleIdTokenVerifier);
-        GoogleIdTokenVerifierTemplate googleIdTokenVerifierTemplate = this.context.getBean(GoogleIdTokenVerifierTemplate.class);
-        assertNotNull(googleIdTokenVerifierTemplate);
+        GoogleTokenVerifierTemplate googleTokenVerifierTemplate = this.context.getBean(GoogleTokenVerifierTemplate.class);
+        assertNotNull(googleTokenVerifierTemplate);
     }
 
     @Configuration

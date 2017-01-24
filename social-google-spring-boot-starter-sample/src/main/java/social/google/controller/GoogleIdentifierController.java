@@ -3,7 +3,7 @@ package social.google.controller;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import social.google.GoogleIdTokenVerifierTemplate;
+import social.google.api.impl.GoogleTokenVerifierTemplate;
 import social.google.model.Token;
 import social.google.model.User;
 
@@ -18,16 +18,16 @@ import static java.util.Objects.isNull;
 @RestController
 public class GoogleIdentifierController {
 
-    private GoogleIdTokenVerifierTemplate googleIdTokenVerifierTemplate;
+    private GoogleTokenVerifierTemplate googleTokenVerifierTemplate;
 
     @Autowired
-    public GoogleIdentifierController(GoogleIdTokenVerifierTemplate googleIdTokenVerifierTemplate) {
-        this.googleIdTokenVerifierTemplate = googleIdTokenVerifierTemplate;
+    public GoogleIdentifierController(GoogleTokenVerifierTemplate googleTokenVerifierTemplate) {
+        this.googleTokenVerifierTemplate = googleTokenVerifierTemplate;
     }
 
     @RequestMapping(value = "/verify", method = RequestMethod.POST)
     public @ResponseBody User verifyToken(@RequestBody Token idToken) throws GeneralSecurityException, IOException {
-        GoogleIdToken googleIdToken = googleIdTokenVerifierTemplate.verify(idToken.getIdToken());
+        GoogleIdToken googleIdToken = googleTokenVerifierTemplate.verify(idToken.getIdToken());
         if (isNull(googleIdToken)) {
             throw new RuntimeException("Unauthenticated User by google");
         }

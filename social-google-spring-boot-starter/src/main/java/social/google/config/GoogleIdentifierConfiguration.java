@@ -1,4 +1,4 @@
-package social.google;
+package social.google.config;
 
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;
 import com.google.api.client.http.HttpTransport;
@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import social.google.api.impl.GoogleTokenVerifierTemplate;
 
 import java.util.Arrays;
 
@@ -47,7 +48,7 @@ public class GoogleIdentifierConfiguration {
     }
 
     @Bean
-    public GoogleIdTokenVerifierTemplate googleIdTokenVerifierTemplate(GoogleIdTokenVerifier googleIdTokenVerifier) {
-        return new GoogleIdTokenVerifierTemplate(googleIdTokenVerifier);
+    public GoogleTokenVerifierTemplate googleIdTokenVerifierTemplate(GoogleIdTokenVerifier googleIdTokenVerifier) {
+        return new GoogleTokenVerifierTemplate(googleIdTokenVerifier);
     }
 }
