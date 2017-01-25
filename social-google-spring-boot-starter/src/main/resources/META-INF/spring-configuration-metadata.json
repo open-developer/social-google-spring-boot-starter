@@ -1,0 +1,9 @@
+{
+  "groups": [
+    {
+      "name": "social.google",
+      "type": "io.github.opendeveloper.social.google.config.GoogleIdentifierProperties",
+      "sourceType": "io.github.opendeveloper.social.google.config.GoogleIdentifierProperties"
+    }
+  ]
+}

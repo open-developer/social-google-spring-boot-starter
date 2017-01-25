@@ -1,4 +1,4 @@
-package social.google.model;
+package io.github.opendeveloper.social.google.model;
 
 /**
  * Created by sgupta on 1/19/17.

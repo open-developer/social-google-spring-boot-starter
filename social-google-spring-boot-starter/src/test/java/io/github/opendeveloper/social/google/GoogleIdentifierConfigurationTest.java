@@ -1,13 +1,13 @@
-package social.google;
+package io.github.opendeveloper.social.google;
 
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;
+import io.github.opendeveloper.social.google.config.GoogleIdentifierConfiguration;
 import org.junit.After;
 import org.junit.Test;
 import org.springframework.boot.test.EnvironmentTestUtils;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Configuration;
-import social.google.api.impl.GoogleTokenVerifierTemplate;
-import social.google.config.GoogleIdentifierConfiguration;
+import io.github.opendeveloper.social.google.api.impl.GoogleTokenVerifierTemplate;
 
 import static org.junit.Assert.assertNotNull;
 

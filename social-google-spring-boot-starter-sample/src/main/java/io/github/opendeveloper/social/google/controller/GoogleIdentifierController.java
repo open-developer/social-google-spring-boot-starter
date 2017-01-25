@@ -1,11 +1,11 @@
-package social.google.controller;
+package io.github.opendeveloper.social.google.controller;
 
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import social.google.api.impl.GoogleTokenVerifierTemplate;
-import social.google.model.Token;
-import social.google.model.User;
+import io.github.opendeveloper.social.google.api.impl.GoogleTokenVerifierTemplate;
+import io.github.opendeveloper.social.google.model.Token;
+import io.github.opendeveloper.social.google.model.User;
 
 import java.io.IOException;
 import java.security.GeneralSecurityException;

@@ -1,4 +1,4 @@
-package social.google.api;
+package io.github.opendeveloper.social.google.api;
 
 import com.google.api.client.auth.openidconnect.IdToken;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;

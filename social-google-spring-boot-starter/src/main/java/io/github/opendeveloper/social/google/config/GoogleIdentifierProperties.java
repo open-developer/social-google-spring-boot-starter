@@ -1,4 +1,4 @@
-package social.google.config;
+package io.github.opendeveloper.social.google.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;

@@ -1,11 +1,10 @@
-package social.google.api.impl;
+package io.github.opendeveloper.social.google.api.impl;
 
 import com.google.api.client.auth.openidconnect.IdToken;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import social.google.api.GoogleTokenVerifier;
+import io.github.opendeveloper.social.google.api.GoogleTokenVerifier;
 
 import java.io.IOException;
 import java.security.GeneralSecurityException;
